@@ -5,5 +5,5 @@ This model is used to integrate api access to [site-template](https://github.com
 
 
 
-# License (MIT)
-Copyright (c) 2015 Brandon L. Clark - [Disclaimer](LICENSE)
+# MIT License (MIT)
+Copyright (c) 2015 Brandon L. Clark - [License Summary](LICENSE)
