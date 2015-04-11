@@ -4,8 +4,11 @@ module.exports.app    = App;
 
 module.exports = function(Obj, cb){
 	if(Obj){
-		
+		App(Obj, function(err, app){
+			if(err) return cb(err, Obj);
+			else return cb(null, app);
+		});		
 	} else {
-		return cb('!No READ Item', Obj);
+		return cb({type:'!No READ Item'}, Obj);
 	}
 };
