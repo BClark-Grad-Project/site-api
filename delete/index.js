@@ -9,6 +9,6 @@ module.exports = function(Obj, cb){
 			else return cb(null, app);
 		});
 	} else {
-		return cb('!No Delete Item', null);
+		return cb({type:'!No Delete Item'}, null);
 	}
 };

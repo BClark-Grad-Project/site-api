@@ -33,16 +33,19 @@ var createApp = function(Obj, cb){
 	
 	app.save(function (err) {
         if (err){
-        	console.log('!app creation err', err);
         	if(getErrorField(err) == 'token') return createApp(Obj);
         	else return cb(err, null);
         }
-        return cb(null, app.getData());
+        
+        var newApp = app.getData();
+        newApp.hash = app.getHash();
+        
+        return cb(null, newApp);
     });
 };
 
 module.exports = function(Obj, cb){
-    if(!Obj.user){ return cb('!No API Owner', Obj);}
+    if(!Obj.user){ return cb({type:'!No API Owner'}, Obj);}
     createApp(Obj, function(err, app){
     	if(err) return cb(err, Obj);
     	else return cb(null, app);

@@ -40,6 +40,15 @@ module.exports.update = function(Obj, cb){
 	} else return cb({type:'!No object'}, Obj);
 };
 
+module.exports.rekey = function(Obj, cb){
+	if(Obj){
+		U.rekey(Obj, function(err, data){
+			if(err) return cb(err, null);
+			else return cb(null, data);
+		});
+	} else return cb({type:'!No object'}, Obj);
+};
+
 module.exports.remove = function(Obj, cb){
 	if(Obj){
 		D(Obj, function(err, data){
