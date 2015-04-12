@@ -14,7 +14,7 @@ module.exports = function(Obj, cb){
 
 module.exports.rekey = function(Obj, cb){
 	if(Obj){
-		App({_id:Obj.id}, Obj, function(err, app){
+		App.rekey(Obj, function(err, app){
 			if(err) return cb(err, Obj);
 			else return cb(null, app);
 		});		
