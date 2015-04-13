@@ -5,7 +5,7 @@ var AppSchema = mongo.Schema({
     user:        {type: mongo.Schema.Types.ObjectId, ref:  'User', required: true},
     name:        {type: String, required: true},
     description: {type: String},
-    created:    {type: Date, 'default': Date.now},
+    created:    {type: Date, 'default': Date.now, required: true},
     token:       {type: String, unique:true, required: true},
     hash:        {type: String, required: true},
     active:      {type: Boolean, 'default': true, required: true}
