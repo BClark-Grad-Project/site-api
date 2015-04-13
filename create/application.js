@@ -20,13 +20,11 @@ var createApp = function(Obj, cb){
     var user        = Obj.user;
     var name        = Obj.name;
     var description = Obj.description;
-    var created     = Obj.created;
     
 	var app = new App({
 	    user:        user,
 	    name:        name,
 	    description: description,
-	    created:     created,
 	    token:       token,
 	    hash:        hash
 	});	

@@ -1,6 +1,5 @@
 var App = require('./application');
 
-
 module.exports = function(Obj, cb){
 	if(Obj){
 		App({_id:Obj.id}, Obj, function(err, app){
