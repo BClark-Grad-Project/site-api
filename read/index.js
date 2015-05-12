@@ -9,6 +9,11 @@ module.exports = function(Obj, cb){
 				if(err) return cb(err, Obj);
 				else return cb(null, app);
 			});
+		} else if(Obj.token){
+			App(Obj, function(err, app){
+				if(err) return cb(err, Obj);
+				else return cb(null, app);
+			});
 		} else {
 			App({_id:Obj.id}, function(err, app){
 				if(err) return cb(err, Obj);
